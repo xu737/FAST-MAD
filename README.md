@@ -18,7 +18,7 @@ For the SWaT dataset, you can apply for it by following its official tutorial, l
 For the UCR dataset, you can apply for it by following its official Archive, link: https://www.cs.ucr.edu/~eamonn/time_series_data_2018.
 
 
-## Train and evaluate.
+## Train and evaluate
 We provide the experiment script under the folder ./scripts. You can reproduce the experiment results as follows:
 ```
 bash ./scripts/main_tes.sh
