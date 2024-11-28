@@ -3,7 +3,7 @@ This repository provides the implementation of _Unity is Strength: Efficient Fed
 
 
 ## Installation
-1. Install Python 3.8, PyTorch >= 1.3.1.
+Install Python 3.8, PyTorch >= 1.3.1.
 This code is based on Python 3.8, PyTorch 1.3.1, the requirements are written in requirements.txt.
 ```
 pip install -r requirements.txt
