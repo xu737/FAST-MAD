@@ -28,7 +28,7 @@ if __name__ == '__main__':
     # basic config
     parser.add_argument('--task_name', type=str, required=False, default='anomaly_detection')
     parser.add_argument('--is_training', type=int, required=True, default=1, help='status')
-    parser.add_argument('--model_id', type=str, required=True, default='test', help='model id')
+    parser.add_argument('--model_id', type=str, required=True, default='False', help='model id')
     parser.add_argument('--model', type=str, required=True, default='GPT4TS')
 
     # data loader
