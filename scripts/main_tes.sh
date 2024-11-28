@@ -10,9 +10,7 @@ python -u run.py \
 --d_ff 1280 \
 --enc_in 38 \
 --c_out 38 \
---train_epochs 2 \
 --local_bs 64 \
---local_epoch 1 \
 --mask_ratio 0.2 \
 --gpu 1 \
 --dataset_names '[ "UCR", "SMD", "MSL","PSM", "SWAT"]' \
