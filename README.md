@@ -16,7 +16,7 @@ You can download SMD, PSM, and MSL from [Google Drive](https://drive.google.com/
 ### SWaT dataset:
 For the SWaT dataset, you can apply for it by following its official tutorial, link: https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/.  
 ### UCR dataset:
-For the UCR dataset, you can apply for it by following its official Archive, link:https://www.cs.ucr.edu/~eamonn/time_series_data_2018.
+For the UCR dataset, you can apply for it by following its official Archive, link: https://www.cs.ucr.edu/~eamonn/time_series_data_2018.
 
 
 ## Train and evaluate.
