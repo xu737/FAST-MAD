@@ -1,7 +1,7 @@
 # Unity is Strength: Efficient Federated Anomaly Detection for Cross-domain Time Series with Sharded LLM [Scalable Data Science] [Under Review]
 
 
-## Installation
+## Environment
 Run the following script for environment configuration.
 ```
 pip install -r requirements.txt
