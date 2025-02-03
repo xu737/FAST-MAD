@@ -22,5 +22,3 @@ We provide the experiment scripts in the folder ./scripts. The experiment result
 ```
 bash ./scripts/main_tes.sh
 ```
-## Implementation Details
-Please refer to [implementation details](ImplementationDetail.md).
