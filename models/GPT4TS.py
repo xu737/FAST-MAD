@@ -52,7 +52,7 @@ class Model(nn.Module):
         self.c_out = dataset_c_out_dict[dataset_id]
 
      
-        self.gpt2 = GPT2Model.from_pretrained('/home/data/xrh/FL/AD_FL/gpt2large', output_attentions=True, output_hidden_states=True)
+        self.gpt2 = GPT2Model.from_pretrained('gpt2large', output_attentions=True, output_hidden_states=True)
 
         self.gpt2.h = self.gpt2.h[:configs.gpt_layers]  
         
