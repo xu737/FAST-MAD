@@ -1,4 +1,4 @@
-# FAST-MAD: Efficient Federated Anomaly Detection for Cross-domain Time Series with Sharded LLM [Under Review]
+# FAST-MAD: Efficient Federated Anomaly Detection for Cross-domain Time Series with Sharded LLMs [Under Review]
 
 
 ## Environment
