@@ -37,27 +37,28 @@ We implement our model with the PyTorch framework on NVIDIA RTX 3090 GPU. The LL
 
 **MICN**: We train MICN using L2 loss and the Adam optimizer with an initial learning rate of `1e-3`. Batch size is set to `32`, and early stopping is applied after 3 epochs without validation loss improvement. Hyperparameter `i` is set to `{12, 16}`.
 
-**DLinear**: We use a non-overlapping sliding window with a length of `100`, and the patch length is set to `10`. The ADAM optimizer is used.
+**DLinear**: We use a non-overlapping sliding window with a length of `100`, and the patch length is set to `10`. The Adam optimizer is used. The learning rate is set to `1e-5`.
 
 **Transformer**: It is trained using the ADAM optimizer with L2 loss, an initial learning rate of `1e-4`, and a batch size of `32`. 
 
 **Autoformer**: It is trained with L2 loss using the ADAM optimizer with an initial learning rate of `1e-4`. Batch size is set to `32`. The training process is early stopped within 10 epochs.
 
-**Crossformer**: We use the same settings as in Zhou et al. (2021). We roll the whole set with stride `1` to generate different input-output pairs. MSE and MAE are used as evaluation metrics.
+**Crossformer**: We use the same settings as in Zhou et al. (2021). We roll the whole set with stride `1` to generate different input-output pairs. MSE and MAE are used as evaluation metrics. The learning rate is set to `1e-5`.
 
-**iTransformer**: We use the Adam optimizer with an initial learning rate in `{1e-3, 5e-4, 1e-4}` and L2 loss for model optimization. The batch size is set to `32`, and the number of training epochs is fixed at `10`. The number of inverted Transformer blocks in the proposed model `L` is in `{2, 3, 4}`. The dimension of series representations `D` is set from `{256, 512}`.
+**iTransformer**: We use the Adam optimizer with an initial learning rate in `The learning rate is set to `1e-5`. The batch size is set to `32`. The dimension of series representations `D` is set to `128`.
 
 **Fedformer**: The model is trained using the Adam optimizer with a learning rate of `1e-4`. The batch size is set to `32`. An early stopping counter is employed to stop training after three epochs if no loss degradation on the validation set is observed.
 
-**UniTS**: We use a batch size of `32`. The learning rate starts at `3.2e-2` and is adjusted with a multi-step decayed schedule.
+**UniTS**: We use a batch size of `32`. The learning rate starts at `3.2e-2` and is adjusted with a multi-step decayed schedule following the papper.
 
-**TimesNet**: We split the dataset into consecutive non-overlapping segments using a sliding window. The batch size is set to `32`, and the Adam optimizer is used.
+**TimesNet**: We split the dataset into consecutive non-overlapping segments using a sliding window. The batch size is set to `32`, and the Adam optimizer is used. The learning rate is set to `1e-5`.
 
 **Anomaly Transformer**: The channel number of hidden states `d_model` is set to `512`, and the number of heads `h` is set to `8`. We use the Adam optimizer with an initial learning rate of `1e-4`. The training process is early stopped within `10` epochs with a batch size of `32`.
 
-**FPt**: We use a non-overlapping sliding window with a length of `100`, and the patch length is set to `10`. The ADAM optimizer is used.
+**FPT**: We use a non-overlapping sliding window with a length of `100`, and the patch length is set to `10`. The Adam optimizer is used. The learning rate is set to `1e-4`.
 
-**PeFAD**: We first split the time series into consecutive non-overlapping segments using a sliding window. The patch length and batch size are set to `10` and `32`, respectively. Adam is adopted for optimization.
+**PeFAD**: The patch length and batch size are set to `10` and `32`, respectively. Adam is adopted for optimization. The Adam optimizer is used. The learning rate is set individually for each dataset as follows: `0.0001` for SMD, PSM, and SWaT; `0.00001` for MSL; and `1e-5` for UCR and SMAP.
+
 
 
 
