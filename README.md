@@ -39,9 +39,9 @@ We implement our model with the PyTorch framework on NVIDIA RTX 3090 GPU. The LL
 
 **DLinear**: We use a non-overlapping sliding window with a length of `100`, and the patch length is set to `10`. The Adam optimizer is used. The learning rate is set to `1e-5`.
 
-**Transformer**: It is trained using the ADAM optimizer with L2 loss, an initial learning rate of `1e-4`, and a batch size of `32`. 
+**Transformer**: It is trained using the Adam optimizer with L2 loss, an initial learning rate of `1e-4`, and a batch size of `32`. 
 
-**Autoformer**: It is trained with L2 loss using the ADAM optimizer with an initial learning rate of `1e-4`. Batch size is set to `32`. The training process is early stopped within 10 epochs.
+**Autoformer**: It is trained with L2 loss using the Adam optimizer with an initial learning rate of `1e-4`. Batch size is set to `32`. The training process is early stopped within 10 epochs.
 
 **Crossformer**: We roll the whole set with stride `1` to generate different input-output pairs. The learning rate is set to `1e-5`, and the Adam optimizer is used
 
