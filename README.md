@@ -30,7 +30,7 @@ We implement our model with the PyTorch framework on NVIDIA RTX 3090 GPU. The LL
 
 [1] Datar M, Gionis A, Indyk P, et al. Maintaining stream statistics over sliding windows[J]. SIAM journal on computing, 2002, 31(6): 1794-1813.
 
-## Baseline details
+## Baseline settings
 **DeepSVDD**：We use the Adam optimizer with default settings and apply Batch Normalization. The two-phase learning rate schedule is adopted: `1e-4` for searching and `1e-5` for fine-tuning. 
 
 **TranAD**：We use the AdamW optimizer with an initial learning rate of `0.01` (meta learning rate `0.02`) and a step scheduler with step size `0.5`. Key hyperparameters include: window size `10`, transformer encoder layers `1`, feed-forward layers per encoder `2`, hidden units per layer `64`, and dropout rate `0.1`.
