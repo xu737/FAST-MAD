@@ -31,7 +31,15 @@ We implement our model with the PyTorch framework on NVIDIA RTX 3090 GPU. The LL
 
 ## Baseline details
 **DeepSVDD**：We use the Adam optimizer with default settings and apply Batch Normalization. Network weights are initialized using Glorot uniform, while DeepSVDD uses pre-trained DCAE encoder weights. A two-phase learning rate schedule is adopted: `1e-4` for searching and `1e-5` for fine-tuning. 
+
 **TranAD**：We use the AdamW optimizer with an initial learning rate of `0.01` (meta learning rate `0.02`) and a step scheduler with step size `0.5`. Key hyperparameters include: window size `10`, transformer encoder layers `1`, feed-forward layers per encoder `2`, hidden units per layer `64`, and dropout rate `0.1`.
+
 **MICN**: We train MICN using L2 loss and the Adam optimizer with an initial learning rate of `1e-3`. Batch size is set to `32`, and early stopping is applied after 3 epochs without validation loss improvement. Hyperparameter `i` is set to `{12, 16}`, and input length is fixed to `96` for all datasets (except `36` for ILI).
+
+**Transformer**: It is trained using the ADAM optimizer with L2 loss, an initial learning rate of `1e-4`, and a batch size of `32`. For efficiency in hyperparameter search, we use a two-layer perceptron projector with hidden dimensions in `{64, 128, 256}` in De-stationary Attention. 
+
+**Autoformer**: It is trained with L2 loss using the ADAM optimizer with an initial learning rate of `1e-4`. Batch size is set to `32`. The training process is early stopped within 10 epochs.
+
+
 
 
