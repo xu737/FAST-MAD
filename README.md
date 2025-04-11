@@ -45,7 +45,7 @@ We implement our model with the PyTorch framework on NVIDIA RTX 3090 GPU. The LL
 
 **Crossformer**: We roll the whole set with stride `1` to generate different input-output pairs. The learning rate is set to `1e-5`, and the Adam optimizer is used
 
-**iTransformer**: We use the Adam optimizer with an initial learning rate in `The learning rate is set to `1e-5`. The batch size is set to `32`. The dimension of series representations `D` is set to `128`.
+**iTransformer**: We use the Adam optimizer. The learning rate is set to `1e-5`. The batch size is set to `32`. The dimension of series representations `D` is set to `128`.
 
 **Fedformer**: The model is trained using the Adam optimizer with a learning rate of `1e-4`. The batch size is set to `32`. An early stopping counter is employed to stop training after three epochs if no loss degradation on the validation set is observed.
 
