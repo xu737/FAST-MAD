@@ -33,21 +33,21 @@ We implement our model with the PyTorch framework on NVIDIA RTX 3090 GPU. The LL
 ## Baseline settings
 **DeepSVDD**：We use the Adam optimizer with default settings and apply Batch Normalization. The two-phase learning rate schedule is adopted: `1e-4` for searching and `1e-5` for fine-tuning. 
 
-**TranAD**：We use the AdamW optimizer with an initial learning rate of `0.01` (meta learning rate `0.02`) following the paper. Key hyperparameters include: feed-forward layers per encoder `2`, hidden units per layer `64`, and dropout rate `0.1`.
+**TranAD**：We use the AdamW optimizer with an initial learning rate of `0.01` following the paper. Key hyperparameters include: feed-forward layers per encoder `2`, hidden units per layer `64`, and dropout rate `0.1`.
 
-**MICN**: We train MICN using L2 loss and the Adam optimizer with an initial learning rate of `1e-3`. Batch size is set to `32`, and early stopping is applied after 3 epochs without validation loss improvement.
+**MICN**: We train MICN using L2 loss and the Adam optimizer with an initial learning rate of `1e-5`. Batch size is set to `32`, and early stopping is applied after 3 epochs without validation loss improvement.
 
 **DLinear**: We use a non-overlapping sliding window with a length of `100`, and the patch length is set to `10`. The Adam optimizer is used. The learning rate is set to `1e-5`.
 
-**Transformer**: It is trained using the Adam optimizer with L2 loss, an initial learning rate of `1e-4`, and a batch size of `32`. 
+**Transformer**: It is trained using the Adam optimizer with L2 loss, an initial learning rate of `1e-5`, and a batch size of `32`. 
 
-**Autoformer**: It is trained with L2 loss using the Adam optimizer with an initial learning rate of `1e-4`. Batch size is set to `32`. The training process is early stopped within 10 epochs.
+**Autoformer**: It is trained with L2 loss using the Adam optimizer with an initial learning rate of `1e-5`. Batch size is set to `32`. The training process is early stopped within 10 epochs.
 
 **Crossformer**: We roll the whole set with stride `1` to generate different input-output pairs. The learning rate is set to `1e-5`, and the Adam optimizer is used
 
 **iTransformer**: We use the Adam optimizer. The learning rate is set to `1e-5`. The batch size is set to `32`. The dimension of series representations `D` is set to `128`.
 
-**Fedformer**: The model is trained using the Adam optimizer with a learning rate of `1e-4`. The batch size is set to `32`. An early stopping counter is employed to stop training after three epochs if no loss degradation on the validation set is observed.
+**Fedformer**: The model is trained using the Adam optimizer with a learning rate of `1e-5`. The batch size is set to `32`. An early stopping counter is employed to stop training after three epochs if no loss degradation on the validation set is observed.
 
 **UniTS**: We use a batch size of `32`. The learning rate starts at `3.2e-2` and is adjusted with a multi-step decayed schedule following the papper.
 
