@@ -1,4 +1,3 @@
-#8766
 from typing import Optional
 import numpy as np
 import torch
@@ -12,9 +11,6 @@ from transformers.models.gpt2.modeling_gpt2 import GPT2Model
 from transformers.models.gpt2.configuration_gpt2 import GPT2Config
 from transformers import BertTokenizer, BertModel
 from einops import rearrange
-# from layers.Embed import DataEmbedding, DataEmbedding_wo_time
-# from data_provider.patch_mask import *
-# from models.AnomalyTransformer import AnomalyTransformer
 
 class Model(nn.Module):
     
