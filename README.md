@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 ## Datasets
 ### SMD, PSM, SMAP, and MSL:
-SMD, PSM, and MSL can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1gisthCoE-RrKJ0j3KPV7xiibhHWT9qRm).  
+SMD, PSM, MSL, and SMAP can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1gisthCoE-RrKJ0j3KPV7xiibhHWT9qRm).  
 ### SWaT dataset:
 Please refer to https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/ for SWaT download.  
 ### UCR dataset:
