@@ -14,7 +14,7 @@ if __name__ == '__main__':
     random.seed(fix_seed)
     torch.manual_seed(fix_seed)
     np.random.seed(fix_seed)
-    # torch.multiprocessing.set_start_method('spawn')  
+
     parser = argparse.ArgumentParser(description='FASTMAD')
 
     parser.add_argument('--local_bs', type=int, required=True, default=256, help='local batch size')
@@ -137,13 +137,11 @@ if __name__ == '__main__':
             exp = Exp(args)  # set experiments
                 
             print('>>>>>>>start training : {}>>>>>>>>>>>>>>>>>>>>>>>>>>'.format(setting))
-
-            
             exp.train(setting=setting)
 
             print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
             exp.test(setting)
-                # torch.cuda.empty_cache()
+
     else:
         ii = 0
         setting = '{}_{}_{}_{}_ft{}_sl{}_ll{}_pl{}_dm{}_nh{}_el{}_dl{}_df{}_fc{}_eb{}_dt{}_{}_{}'.format(
@@ -152,7 +150,7 @@ if __name__ == '__main__':
             args.model,
             args.data,
             args.features,
-            args.seq_len,  #100
+            args.seq_len,  
             args.label_len,
             args.pred_len,
             args.d_model,
