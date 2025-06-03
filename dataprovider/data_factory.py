@@ -9,7 +9,6 @@ from merlion.transform.normalize import MeanVarNormalize
 import ast
 
 def other_datasets(time_series, meta_data):
-    # print('meta_data.trainval',meta_data.trainval)
     train_time_series_ts = TimeSeries.from_pd(time_series[meta_data.trainval])
     test_time_series_ts = TimeSeries.from_pd(time_series[~meta_data.trainval])
     train_labels = TimeSeries.from_pd(meta_data.anomaly[meta_data.trainval])
@@ -26,7 +25,6 @@ def other_datasets(time_series, meta_data):
     # test_data = (test_time_series - bias) / scale
 
     train_data = train_time_series
-    # print('train_data.shape',train_data.shape)
     test_data = test_time_series
     train_labels = train_labels.to_pd().to_numpy()
     test_labels = test_labels.to_pd().to_numpy()
@@ -118,7 +116,6 @@ def data_provider(args, flag, shared):
     client_data = {}
     client_test_data = {}
     client_test_labels = {}
-    # print(flag)
     for i, dataset_name in enumerate(dataset_names):
         
         train_data, train_labels, test_data, test_labels = Distribute_data(dataset_name=dataset_name, root_path=args.root_path, flag=flag,n=args.n_ucr)
@@ -155,8 +152,6 @@ def data_provider(args, flag, shared):
             periods_num = args.periods_num,
             multi_resolution = args.multi_resolution
         )
-    # for id,item in client_dataset_dict.items():
-    #     print('~',id,len(item)) ###2
     
     client_loader_dict = {}
     for client_id, client_train_data in client_data.items():
