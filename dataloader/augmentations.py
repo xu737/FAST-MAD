@@ -13,7 +13,6 @@ def DataTransform(sample, config):
 
 
 def jitter(x, sigma=0.8):
-    # https://arxiv.org/pdf/1706.00527.pdf
     return x + np.random.normal(loc=0., scale=sigma, size=x.shape)
 
 
