@@ -33,9 +33,6 @@ warnings.filterwarnings('ignore')
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 from thop import profile
 
-# from gpu_mem_track import MemTracker
-# gpu_tracker = MemTracker() 
-# from modelsize_estimate import modelsize
 import pandas as pd
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
