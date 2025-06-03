@@ -7,11 +7,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 from sklearn.preprocessing import StandardScaler
 # from utils.timefeatures import time_features
-# from data_provider.m4 import M4Dataset, M4Meta
-# from data_provider.uea import subsample, interpolate_missing, Normalizer
 from data_provider.patch_mask import *
-# from data_provider.test import *
-# from sktime.utils import load_data
 import warnings
 import torch.nn as nn
 warnings.filterwarnings('ignore')
