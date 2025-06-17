@@ -12,7 +12,7 @@ from pathlib import Path
 import sys
 import zipfile
 
-import numpy as np
+import numpy as np 
 import pandas as pd
 
 from data_provider.base import TSADBaseDataset
