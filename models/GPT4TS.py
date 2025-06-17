@@ -10,7 +10,7 @@ from transformers import GPT2ForSequenceClassification
 from transformers.models.gpt2.modeling_gpt2 import GPT2Model
 from transformers.models.gpt2.configuration_gpt2 import GPT2Config
 from transformers import BertTokenizer, BertModel
-from einops import rearrange
+from einops import rearrange 
 
 class Model(nn.Module):
     
