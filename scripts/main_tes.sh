@@ -13,4 +13,4 @@ python -u run.py \
 --gpu 1 \
 --local_epoch 2 \
 --dataset_names '[ "UCR", "SMD", "MSL","PSM", "SWAT"]' \
---dataset_device '{"UCR": 2, "SMD": 2, "MSL": 2, "PSM": 2, "SWAT": 2, "IOps":3}' \
+--dataset_device '{"UCR": 2, "SMD": 2, "MSL": 2, "PSM": 2, "SWAT": 2}' \
