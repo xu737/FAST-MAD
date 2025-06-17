@@ -1,4 +1,4 @@
-# FAST-MAD: Efficient Federated Anomaly Detection for Cross-domain Time Series with Sharded LLMs [Under Review]
+# Bridging Data Silos: Efficient Federated Cross-domain Time Series Anomaly Detection [Under Review]
 
 
 ## Environment
