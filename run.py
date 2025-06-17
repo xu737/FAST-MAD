@@ -93,8 +93,6 @@ if __name__ == '__main__':
     parser.add_argument('--percent', type=int, default=5)
 
     parser.add_argument('--param_loss_coef', type=float, default=0.1)
-
-
     parser.add_argument('--mp_worker_num', type=int, default=8)
     parser.add_argument('--n_ucr', type=int, default=2)
     parser.add_argument('--seleck_k', type=int, default=3)
