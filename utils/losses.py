@@ -67,7 +67,6 @@ class smape_loss(nn.Module):
         return 200 * t.mean(divide_no_nan(t.abs(forecast - target),
                                           t.abs(forecast.data) + t.abs(target.data)) * mask)
 
-
 class mase_loss(nn.Module):
     def __init__(self):
         super(mase_loss, self).__init__()
