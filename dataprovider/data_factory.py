@@ -5,7 +5,7 @@ import os
 import pandas as pd
 from data_provider.ucr import UCR
 from merlion.utils import TimeSeries
-from merlion.transform.normalize import MeanVarNormalize
+from merlion.transform.normalize import MeanVarNormalize 
 import ast
 
 def other_datasets(time_series, meta_data):
