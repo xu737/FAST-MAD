@@ -11,5 +11,5 @@ def ts_augmentation(values, augmentations={'TimeWarp', 'Convolve', 'Quantize'}, 
     if reduction == 'none':
         results = [augmentors[augmentor].augment(values).squeeze(0) for augmentor in augmentations]
         return np.concatenate(results, axis=0)
-    elif reduction == 'sum':
+    elif reduction == 'sum': 
         return sum(augmentors.values(), Reverse() @ 0.03).augment(values).squeeze(0)
