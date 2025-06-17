@@ -5,7 +5,7 @@ import numpy as np
 import math
 from math import sqrt
 import os
-torch.cuda.set_device(3)
+
 
 class TriangularCausalMask():
     def __init__(self, B, L, device="cuda:3"):
