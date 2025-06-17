@@ -1,5 +1,5 @@
 import numpy as np
-import torch
+import torch 
 
 
 def DataTransform(sample, config):
